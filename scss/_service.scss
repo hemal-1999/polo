@@ -1,0 +1,68 @@
+/*
+===========================================================================
+                                Service Section
+===========================================================================
+*/
+section#services{
+    // service boxes
+    .service-boxes{
+        // single service box
+        .single-box{
+            position: relative;
+            background-color: #F9FCFF;
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+            padding-left: 1.5em;
+            padding-right: 1.5em;
+            line-height: 1.3;
+            z-index:0;
+            @extend %box-shadow-4-side;
+            &:hover,&:hover i,&:hover h4{
+                color: #fff;
+            }
+            &::before{
+                content: "";
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                z-index: -1;
+                background-color: $orange-color;
+                transform: scale(0);
+                visibility: hidden;
+                transition: .5s;
+            }
+            &:hover::before{
+                visibility: visible;
+                transform: scale(1);
+            }
+            %box-shadow-4-side{
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color: $orange-color;
+            }
+            // service-box-title
+            h4{
+                text-transform: capitalize;
+                font-size: 25px;
+                font-weight: 600;
+                color: $gray-color;
+            }
+            //service-box-iicon
+            i{
+                font-size: 35px;
+                color: $orange-color;
+                padding:15px 10px 10px;
+                padding-left: 0;
+            }
+            small{
+                text-transform: capitalize;
+            }
+        }
+    }
+}

@@ -1,0 +1,74 @@
+// reset css
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-size:18px;
+    font-family: 'Roboto';
+    a{
+        &:hover{
+            text-decoration: none !important;
+        }
+    }
+    // clearfix
+    .clear{
+        clear:both;
+    }
+    //generic button
+    .generic-btn{
+        display: inline-block;
+        padding: 10px 25px;
+    }
+    // generic title
+    .generic-title{
+        h3{
+            position: relative;
+            text-transform: uppercase;
+            text-align: center;
+            font-weight: 600;
+            
+            span{
+                color: orange;
+            }
+            &::after{
+                content: "";
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                width: 8rem;
+                margin-left: -4rem;
+                height: 3px;
+                @extend %orange-background;
+            }
+            &::before{
+                content: "";
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                margin-left: -6px;
+                margin-top: -5px;
+                height: 12px;
+                width: 12px;
+                border-radius: 50%;
+                @extend %orange-background;
+            }
+        }
+    }
+    // section margin
+    .section-margin{
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+        padding-bottom: 0.5rem;
+    }
+    //unorderd list style
+    ul{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+}

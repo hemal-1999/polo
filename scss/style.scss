@@ -1,0 +1,20 @@
+// font-family: 'Roboto';
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap');
+// font-family: 'Trade Winds', ;
+@import url('https://fonts.googleapis.com/css?family=Trade+Winds&display=swap');
+// font-family: 'Simonetta', ;
+@import url('https://fonts.googleapis.com/css?family=Simonetta&display=swap');
+
+
+// Others scss file linkup
+@import 'reset';
+@import 'variables';
+@import 'header';
+@import 'about';
+@import 'work';
+@import 'service';
+@import 'client-review';
+@import 'contact';
+@import 'blog';
+@import 'footer';
+@import 'responsive';

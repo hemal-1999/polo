@@ -1,0 +1,97 @@
+/*
+===========================================================================
+                                Header Section
+===========================================================================
+*/
+
+// main header
+header{
+    background-image: url("../images/header-img.jpg");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 0;
+    height: 100vh;
+    &::after{
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.4);
+        z-index: -1;
+    }
+    //navbar
+    nav.navbar{
+        background-color: transparent;
+        //navbar toggler
+        .navbar-toggler{
+            span{
+                i.fa-bars{
+                    font-size: 25px;
+                }
+            }
+        }
+        //navbar brand
+        a.navbar-brand{
+            font-family: 'Trade Winds', ;
+            text-transform: uppercase;
+            font-size: 18px;
+            font-weight: 700;
+            color: $light-color;
+        }
+        //header menu
+        div#header-menu{
+            ul.navbar-nav{
+                li{
+                    a.nav-link{
+                        color: $light-color;
+                        text-transform: uppercase;
+                        font-weight: 600;
+                        transition: .5s;
+                        &:hover{
+                            color: $orange-color;
+                        }
+                    }
+                }
+                li.active a.nav-link{
+                    color: $orange-color;
+                }
+            }
+        }
+    }
+    //header content
+    .main-header-content{
+        height: 90vh;
+        display: table;
+        .header-content{
+            display: table-cell;
+            vertical-align: middle;
+            width: 100vw;
+            text-align: center;
+            color: #fff;
+            p{
+                font-weight: 500;
+            }
+            h2{
+                font-weight: 700;
+                text-transform: uppercase;
+                font-size: 45px;
+                span{
+                    color: $orange-color;
+                }
+            }
+            a{
+                @extend %light-gray-border;
+                text-transform: uppercase;
+                color: $light-color;
+                font-weight: 600;
+                transition: .5s;
+                &:hover{
+                    background-color: $light-gray;
+                }
+            }
+        }
+    }
+}

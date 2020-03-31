@@ -1,0 +1,74 @@
+/*
+===========================================================================
+                                Blog Section
+===========================================================================
+*/
+/* blog section =======================================*/
+section#blog{
+    .blog-single-item{
+        padding-bottom: 2rem;
+        @extend %border-4-side;
+        //blog image parent
+    .blog-image-parent{
+        // blog image
+        .blog-image{
+            position: relative;
+            //blog overlay
+            &::after{
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 0%;
+                height: 100%;
+                backface-visibility: hidden;
+                background-color: rgba(255, 166, 0, 0.514);
+                visibility: hidden;
+                transition-timing-function: linear;
+                transition-duration: .5s;
+                -webkit-transition-duration: .5s;
+                -moz-transition-duration: .5s;
+                -o-transition-duration: .5s;
+            }
+            //blog overlay on hover
+            &:hover::after{
+                width: 100%;
+                visibility: visible;
+            }
+        }
+        }
+        //blog description
+        .blog-dec{
+            //blog description title
+            h5{
+                text-transform: uppercase;
+                font-family: 'Simonetta', sans-serif;
+                text-align: center;
+                font-weight: 700;
+                color: $dark-color;
+                font-size: 17px;
+                letter-spacing: 0.9px;
+                padding-top: 1.5rem;
+                word-spacing: 2.5px;
+                transition: .5s;
+                transition-timing-function: linear;
+                &:hover{
+                    color: $orange-color;
+                }
+            }
+            //blog description content
+            p{
+                font-size: 15px;
+                text-transform: capitalize;
+                font-weight: 500;
+                font-family: 'Simonetta', sans-serif;
+            }
+            // blog description date
+            small{
+                font-family: 'Simonetta', sans-serif;
+                color: $orange-color;
+                font-weight: 600;
+            }
+        }
+    }
+}

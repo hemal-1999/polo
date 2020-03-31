@@ -1,0 +1,45 @@
+// css variables
+    $light-color: #fff;
+    $dark-color: #000;
+    $orange-color: rgb(255, 166, 2);
+    $orange-light: rgba(255, 166, 0, 0.493);
+    $light-gray: rgba(255, 255, 255, 0.205);
+    $darken-light-gray: rgba(119, 119, 119, 0.664);
+    $gray-color: #333;
+    //success background
+    .success{
+        color: $orange-color;
+    }
+
+
+
+    /* Inheritance :========================================*/
+    //orange light backround
+    %orange-light-background{
+        background-color: $orange-light;
+    }
+    //light gray border
+    %light-gray-border{
+        border: 1px solid $light-gray;
+    }
+    //light gray background
+    %orange-background{
+        background-color: $orange-color;
+    }
+    //generic box shadow
+    %box-shadow-4-side{
+        box-shadow: 0 0 35px rgba(0,0,0,0.2);
+    }
+    //border 4 side
+    %border-4-side{
+        border: 2px solid rgba(0, 0, 0, 0.13);
+    }
+    //generic filter box shadow ( used for clip-path poligon )
+    %filter-box-shadow-4-side{
+        filter: drop-shadow(0 0 40px rgba(0,0,0,0.2));
+    }
+    //orange border bottom
+    %orange-border-bottom{
+        border-bottom: 2px solid $orange-color;
+    }
+    

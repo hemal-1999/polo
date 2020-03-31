@@ -1,0 +1,70 @@
+/*
+===========================================================================
+                                About Section
+===========================================================================
+*/
+section#about{
+    .container{
+        .row{
+            .col-md-6{
+                // about image
+                .about-img-box{
+                    position: relative;
+                    z-index: 0;
+                    @extend %box-shadow-4-side;
+                    clip-path: polygon(0 0,100% 0,100% 85%,50% 100%,0 85%);
+                    // about image overlay
+                    &::after{
+                        position: absolute;
+                        content: "";
+                        left: 0;
+                        top: 0;
+                        width: 100%;
+                        height: 100%;
+                        background-color: rgba(0,0,0,0.3);
+                        z-index: 1;
+                    }
+                }
+            }
+            .col-md-6{
+                // about content
+                .about-content{
+                    h3{
+                        text-transform: capitalize;
+                        font-size: 30px;
+                        span{
+                            color: $orange-color;
+                        }
+                    }
+                    p{
+                        text-transform: capitalize;
+                        margin-top: 1rem;
+                        color: $gray-color;
+                    }
+                }
+                //social icons
+                ul.social-icons{
+                    text-align: center;
+                    li{
+                        list-style: none;
+                        display: inline-block;
+                        i{
+                            font-size: 25px;
+                            width: 40px;
+                            height: 40px;
+                            border-radius: 100%;
+                            border:2px solid $darken-light-gray;
+                            line-height: 35px;
+                            color: #000;
+                            transition: .5s;
+                            &:hover{
+                                border-color: $orange-color;
+                                color: $orange-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

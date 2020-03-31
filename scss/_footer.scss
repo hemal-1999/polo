@@ -1,0 +1,37 @@
+/*
+===========================================================================
+                                Footer Section
+===========================================================================
+*/
+//footer section start
+section#footer{
+    text-align: center;
+    margin-top: 4rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background-color: $orange-color;
+    color: $light-color;
+    p{
+        font-family: 'Trade Winds', ;
+        font-size: 19px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    //title for purches
+    h2{
+        text-transform: uppercase;
+        font-family: 'Trade Winds', ;
+        letter-spacing: 2px;
+        word-spacing: 10px;
+        text-align: center;
+        padding-top: 3rem;
+    }
+    //purches button
+    a{
+        display: inline-block;
+        padding: 10px 15px;
+        margin-top: 2rem;
+        color: $light-color;
+        border: 2px solid $light-gray
+    }
+}
